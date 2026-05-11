@@ -35,3 +35,4 @@ await server.start();
 ## License
 
 MIT
+trigger
