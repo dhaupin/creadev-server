@@ -1,0 +1,37 @@
+{
+  "name": "@creadev.org/server",
+  "version": "0.3.1",
+  "type": "module",
+  "description": "HTTP server with security, qos, network handlers",
+  "keywords": [
+    "server",
+    "http",
+    "api"
+  ],
+  "author": "dhaupin",
+  "repository": "https://github.com/dhaupin/creadev-server",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.1"
+  },
+  "files": [
+    "dist"
+  ]
+}
