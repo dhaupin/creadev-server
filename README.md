@@ -7,17 +7,30 @@
 
 ## Install
 
-\`\`\`bash
+```bash
 npm install @creadev.org/server
-\`\`\`
+```
 
 ## Usage
 
-\`\`\`typescript
-import { } from '@creadev.org/server';
+```typescript
+import { Server, createServer, Request, Response } from '@creadev.org/server';
 
-// ...
-\`\`\`
+const server = createServer({ port: 3000 });
+server.use(async (req) => {
+  return { status: 200, body: 'Hello' };
+});
+await server.start();
+```
+
+## API
+
+| Function | Description |
+|----------|-------------|
+| `createServer(options?)` | Create server |
+| `server.use(middleware)` | Add middleware |
+| `server.start()` | Start server |
+| `server.stop()` | Stop server |
 
 ## License
 
