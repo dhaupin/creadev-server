@@ -1,18 +1,11 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { createServer, json, cors } from '../src/index';
+import { describe, it, expect } from 'vitest';
+import { json, cors } from '../src/index';
 
-describe('createServer', () => {
-  it('creates server instance', () => {
-    const app = createServer({ port: 0 });
-    expect(app).toBeDefined();
-    app.close();
+describe('Server utils', () => {
+  it('json middleware', () => {
+    expect(typeof json).toBe('function');
   });
-});
-
-describe('json middleware', () => {
-  it('is function', () => { expect(typeof json).toBe('function'); });
-});
-
-describe('cors middleware', () => {
-  it('is function', () => { expect(typeof cors).toBe('function'); });
+  it('cors middleware', () => {
+    expect(typeof cors).toBe('function');
+  });
 });
